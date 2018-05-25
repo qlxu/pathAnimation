@@ -1,18 +1,63 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	>
+<!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+     <!--&gt;-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+     >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/icon_bg"
+		android:scaleType="center"
+        />
 
-    <TextView
+	<ImageView
+		android:id="@+id/cartIV"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/icon_cart"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="120dp"
+		android:visibility="gone"
+		/>
+    <com.mcxtzhang.pathanimlib.PathAnimView
+        android:id="@+id/storeView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+		android:visibility="gone"
+		/>
+	<!--<RelativeLayout-->
+		<!--android:id="@+id/rlt_animation_layout"-->
+		<!--android:layout_width="match_parent"-->
+		<!--android:layout_height="match_parent" />-->
 
-</android.support.constraint.ConstraintLayout>
+	<Button
+	    android:id="@+id/but_run"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="run"
+	    />
+	<ListView
+		android:id="@+id/dataLV"
+		android:visibility="gone"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+	</ListView>
+
+</RelativeLayout>
+<!--</ScrollView>-->
+	<RelativeLayout
+		android:id="@+id/rlt_animation_layout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		></RelativeLayout>
+</RelativeLayout>
